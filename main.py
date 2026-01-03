@@ -1,7 +1,6 @@
 from skimage.filters import median
 from skimage.morphology import ball
 from PIL import Image
-
 test=load_image("C:\Users\noazi\Downloads\Road_runner.jpg")
 clean_image = median(test)
 edge_test=edge_detection(clean_image)
