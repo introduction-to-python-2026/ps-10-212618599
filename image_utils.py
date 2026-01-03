@@ -9,7 +9,7 @@ def load_image(path):
  img_array = np.array(img)
  if img_array.ndim == 2:
   img_array = img_array[:, :, np.newaxis]
- return img_array
+ return img
 
 
 def edge_detection(image):
