@@ -2,7 +2,7 @@ from skimage.filters import median
 from skimage.morphology import ball
 from PIL import Image
 test=load_image("C:\Users\noazi\Downloads\Road_runner.jpg")
-clean_image = median(test)
+clean_image = median(test,ball(3))
 edge_test=edge_detection(clean_image)
 plt.imshow(edge_test, cmap='gray')
 edge_binary = edge > 50
