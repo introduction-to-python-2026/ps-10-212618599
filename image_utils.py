@@ -19,5 +19,5 @@ def edge_detection(image):
                         [ 1, 0, -1]])
   edge_X = signal.convolve2d(gray_image, kernelX, mode='same')
   edge_Y = signal.convolve2d(gray_image, kernelY, mode='same')
-  edge_X_Y = np.sqrt(edge_X**2 + edge_Y**2)
-  return edge_X_Y
+  edgeMAG = np.sqrt(edge_X**2 + edge_Y**2)
+  return edgeMAG
