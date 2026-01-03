@@ -11,6 +11,7 @@ def load_image(path):
   img_array = img_array[:, :, np.newaxis]
  return img_array
 
+
 def edge_detection(image):
  if image.ndim == 3 and image.shape[-1] == 3:
   gray_image = np.mean(image, axis=2)
