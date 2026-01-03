@@ -7,6 +7,10 @@ import matplotlib.pyplot as plt
 def load_image(path):
  img = Image.open(path)
  return img
+ img_array = np.array(img)
+ if img_array.ndim == 2:
+  img_array = img_array[:, :, np.newaxis]
+ return img_array
 
 def edge_detection(image):
  if image_to_process.ndim == 3 and image_to_process.shape[-1] == 3:
