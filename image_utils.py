@@ -6,17 +6,16 @@ import matplotlib.pyplot as plt
 
 def load_image(path):
  img = Image.open(path)
- return img
  img_array = np.array(img)
  if img_array.ndim == 2:
   img_array = img_array[:, :, np.newaxis]
  return img_array
 
 def edge_detection(image):
- if image_to_process.ndim == 3 and image_to_process.shape[-1] == 3:
-  gray_image = np.mean(image_to_process, axis=2)
+ if image.ndim == 3 and image.shape[-1] == 3:
+  gray_image = np.mean(image, axis=2)
  else:
-  gray_image = np.squeeze(image_to_process)
+  gray_image = image
  kernelY = np.array([[ 1, 2, 1],
                         [ 0, 0, 0],
                         [ -1, -2, -1]])
