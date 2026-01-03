@@ -9,8 +9,10 @@ def load_image(path):
  return img
 
 def edge_detection(image):
- gray_image = np.mean(image, axis=2)
- plt.axis('off')
+ if image_to_process.ndim == 3 and image_to_process.shape[-1] == 3:
+  gray_image = np.mean(image_to_process, axis=2)
+ else:
+  gray_image = np.squeeze(image_to_process)
  kernelY = np.array([[ 1, 2, 1],
                         [ 0, 0, 0],
                         [ -1, -2, -1]])
