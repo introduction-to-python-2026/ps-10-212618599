@@ -8,7 +8,7 @@ def load_image(path):
     return img_array
 
 def edge_detection(image):
-    gray_image = np.mean(image, axis=2)  # Convert to grayscale   
+    gray_image = np.mean(img_array, axis=2)   
     kernelY = np.array([[ 1, 1, 1],
                         [ 0, 0, 0],
                         [ -1, -1, -1]])
